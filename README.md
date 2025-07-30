@@ -2,59 +2,58 @@
 
 ```js
 Next.js App/
-├── node_modules/ # Auto-generated, ignore
-├── public/ # Static files (images, favicon, etc.)
+├── node_modules/
+├── public/
 │ ├── favicon.ico
 │ ├── images/
 │ └── ...
-├── src/ # Main source code
-│ ├── app/ # Pages and layouts (Next.js app directory)
-│ │ ├── (dashboard) # Consider dashboard will another app
-│ │ │ ├── layout.tsx # Root layout for the dashboard
-│ │ │ └── page.tsx # Dashboard homepage
-│ │ ├── layout.tsx # Root layout for the app
-│ │ ├── page.tsx # Home page
-│ │ ├── [slug]/ # Dynamic routes for future pages
+├── src/
+│ ├── app/
+│ │ ├── (dashboard)
+│ │ │ ├── layout.tsx
+│ │ │ └── page.tsx
+│ │ ├── layout.tsx
+│ │ ├── page.tsx
+│ │ ├── [slug]/
 │ │ │ └── page.tsx
 │ │ └── ...
 │ ├── assets/
-│ │ ├── svg/  # All the svg icons (e.g., Moon.tsx)
-│ │ ├── images/ # like dynamic images or something like that
+│ │ ├── svg/
+│ │ ├── images/
 │ │ └── ...
-│ ├── components/ # Reusable UI components
-│ │ ├── ui/ # Generic, reusable components (e.g., Button, Input)
+│ ├── components/
+│ │ ├── ui/
 │ │ │ ├── Button.tsx
 │ │ │ ├── Input.tsx
 │ │ │ └── Box.tsx
-│ │ ├── layout/ # Layout-specific components - will be available though out the app
-│ │ │ ├── Navbar.tsx # for components specific to layouts
+│ │ ├── layout/
+│ │ │ ├── Navbar.tsx
 │ │ │ └── Footer.tsx
-│ │ └── page/ # Page-specific components
-│ │ │ ├── DashboardHeader.tsx # for components specific to layouts
-│ │ │ └── HomePageServices.tsx # Parent component will be map through the data to child
-│ │ │ │ └── HomePageService.tsx # Child component being mapped to parent (e.g, HomePageServices.tsx)
-│ ├── lib/ # Utility functions and constants
-│ │ ├── types.ts # TypeScript types and interfaces
-│ │ └── utils.ts # Utility functions
-│ ├── store/ # Redux-related files
-│ │ ├── slices/ # Redux slices for different features
+│ │ └── page/
+│ │ │ ├── DashboardHeader.tsx
+│ │ │ └── HomePageServices.tsx
+│ │ │ │ └── HomePageService.tsx
+│ ├── lib/
+│ │ ├── types.ts
+│ │ └── utils.ts
+│ ├── store/
+│ │ ├── slices/
 │ │ │ ├── authSlice.ts
 │ │ │ └── userSlice.ts
-│ │ ├── store.ts # Redux store configuration
-│ │ └── types.ts # Redux-specific types
-│ ├── styles/ # Tailwind and global styles
-│ │ └── custom.css # Custom utility classes if needed
-│ └── hooks/ # Custom React hooks
-│ │ ├── useAuth.ts # Example custom hook
+│ │ ├── store.ts
+│ │ └── types.ts
+│ ├── styles/
+│ │ └── custom.css
+│ └── hooks/
+│ │ ├── useAuth.ts
 │ │ └── ...
-├── .gitignore # Git ignore file
-├── eslint.config.mjs # ESLint configuration
-├── next.config.ts # Next.js configuration
-├── next-env.d.ts # TypeScript environment definitions
-├── package.json # Project dependencies and scripts
-├── postcss.config.mjs # PostCSS configuration (for Tailwind)
-├── README.md # Project documentation
-└── tsconfig.json # TypeScript configuration
+├── eslint.config.mjs
+├── next.config.ts
+├── next-env.d.ts
+├── package.json
+├── postcss.config.mjs
+├── README.md
+└── tsconfig.json
 ```
 
 ## Best Practices and Guidance About Folder Structure
@@ -108,7 +107,6 @@ This guide is here to help you understand the purpose of each folder and how to 
 
 - **Purpose**: Stores global and custom styles with Tailwind CSS.
 - **Usage**:
-  - `globals.css`: Include Tailwind directives and global styles.
   - `custom.css`: Add custom utility classes if needed.
 
 ### `src/hooks/`
