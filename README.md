@@ -1,4 +1,4 @@
-## Here is the full folder structure
+## Here is the full folder structure 📂
 
 ```js
 Next.js App/
@@ -56,7 +56,7 @@ Next.js App/
 └── tsconfig.json
 ```
 
-## Best Practices and Guidance About Folder Structure
+## Best Practices and Guidance About Folder Structure ⚡
 
 This guide is here to help you understand the purpose of each folder and how to use them effectively in our front-end app, mainly for Next.js app. Let’s follow these conventions to keep our codebase centralized and scalable!.
 
