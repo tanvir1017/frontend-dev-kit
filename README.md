@@ -1,3 +1,13 @@
+<p align="center">
+  <a href="https://tailwindcss.com" target="_blank">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="https://res.cloudinary.com/djehzyhl5/image/upload/dev-kit_ratznl.jpg">
+      <source media="(prefers-color-scheme: light)" srcset="https://res.cloudinary.com/djehzyhl5/image/upload/dev-kit_ratznl.jpg">
+      <img alt="Tailwind CSS" src="https://res.cloudinary.com/djehzyhl5/image/upload/dev-kit_ratznl.jpg" style="max-width: 100%;">
+    </picture>
+  </a>
+</p>
+
 ## Here is the full folder structure 📂
 
 ```js
