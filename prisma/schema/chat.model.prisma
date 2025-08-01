@@ -1,0 +1,45 @@
+// Join table for many-to-many relationship between User and Conversation
+model Participants {
+    id       String   @id @default(auto()) @map("_id") @db.ObjectId
+    joinedAt DateTime @default(now())
+
+    userId String @db.ObjectId
+    user   User   @relation(fields: [userId], references: [id])
+
+    conversationId String       @db.ObjectId
+    conversation   Conversation @relation(fields: [conversationId], references: [id])
+
+    @@map("participants")
+}
+
+model Conversation {
+    id               String           @id @default(auto()) @map("_id") @db.ObjectId
+    conversationType ConversationType @default(DIRECT) // For group chats, could be null for 1:1 chats
+    unreadCount      Int              @default(0)
+    lastMessage      String           @default("") // every time message update last message should be updated
+
+    participants Participants[]
+    messages     Messages[]
+
+    createdAt DateTime @default(now())
+    updatedAt DateTime @updatedAt
+
+    @@map("conversations")
+}
+
+model Messages {
+    id      String        @id @default(auto()) @map("_id") @db.ObjectId
+    content String // Text content (optional if attachment exists)
+    status  MessageStatus @default(SENT) // SENT, DELIVERED, READ
+
+    conversationId String       @db.ObjectId
+    conversations  Conversation @relation(fields: [conversationId], references: [id])
+
+    senderId String @db.ObjectId
+    sender   User   @relation(fields: [senderId], references: [id])
+
+    createdAt DateTime @default(now())
+    updatedAt DateTime @updatedAt
+
+    @@map("messages")
+}

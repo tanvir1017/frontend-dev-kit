@@ -1,0 +1,14 @@
+services:
+  api:
+    container_name: chat-server
+    image: frontend-dev-kit
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "7549:7549"
+    env_file:
+      - .env
+    environment:
+      - NODE_ENV=production
+    restart: unless-stopped

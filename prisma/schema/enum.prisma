@@ -1,0 +1,38 @@
+enum UserStatus {
+    ONLINE
+    OFFLINE
+}
+
+enum UserRole {
+    SUPER_ADMIN
+    ADMIN
+    USER
+}
+
+enum Gender {
+    MAN
+    WOMEN
+}
+
+enum ChatType {
+    DIRECT
+    GROUP
+}
+
+enum FileType {
+    IMAGE
+    VIDEO
+    DOCUMENT
+    AUDIO
+}
+
+enum MessageStatus {
+    SENT
+    DELIVERED
+    READ
+}
+
+enum ConversationType {
+    DIRECT
+    GROUP
+}

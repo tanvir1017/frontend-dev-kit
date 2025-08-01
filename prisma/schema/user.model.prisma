@@ -1,0 +1,17 @@
+model User {
+    id           String         @id @default(auto()) @map("_id") @db.ObjectId
+    firstName    String
+    lastName     String
+    email        String         @unique
+    password     String
+    userImage    String?
+    lastSeen     DateTime?
+    status       UserStatus     @default(OFFLINE) // ONLINE, OFFLINE
+    role         UserRole
+    createdAt    DateTime       @default(now())
+    updatedAt    DateTime       @updatedAt
+    participants Participants[]
+    sentMessages Messages[]
+
+    @@map("users")
+}
