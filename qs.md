@@ -1,0 +1,5 @@
+- Is there any need to use redux with next.js
+- How to use In-Memory authentication in next.js
+- Learn about the slice, reducer, store, persistence, devtools
+- caching, invalidation
+- optimistic ui update

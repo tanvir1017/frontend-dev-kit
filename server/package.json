@@ -1,0 +1,17 @@
+{
+  "name": "server",
+  "module": "index.ts",
+  "type": "module",
+  "scripts": {
+    "start": "json-server --watch db_videos.json -p 3500"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "json-server": "^1.0.0-beta.3"
+  }
+}
